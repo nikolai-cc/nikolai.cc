@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nikolai.cc</title>
+    <link rel="stylesheet" href="fira_code.css">
+    <style>
+    /* Scroll to read styles, hover to expand. */
+
+    * { display: block; }
+    a,code,em,strong { display:inline; }
+
+    style, blockquote, script, li { white-space: pre-wrap; }
+
+    html::before { content: '<html>'; }
+    html::after { content: '</html>'; }
+    head::before { content: '<head>'; }
+    head::after { content: '</head>'; }
+    title::before { content: '<title>'; }
+    title::after { content: '</title>'; }
+    body::before { content: '<body>'; }
+    body::after { content: '</body>'; }
+    h1::before { content: '<h1>'; }
+    h1::after { content: '</h1>'; }
+    h2::before { content: '<h2>'; }
+    h2::after { content: '</h2>'; }
+    h3::before { content: '<h3>'; }
+    h3::after { content: '</h3>'; }
+    p::before { content: '<p>'; }
+    p::after { content: '</p>'; }
+    pre::before { content: '<pre>'; }
+    pre::after { content: '</pre>'; }
+    code::before { content: '<code>'; }
+    code::after { content: '</code>'; }
+    aside::before { content: '<aside>'; }
+    aside::after { content: '</aside>'; }
+    blockquote::before { content: '<blockquote>'; }
+    blockquote::after { content: '</blockquote>'; }
+    em::before { content: '<em>'; }
+    em::after { content: '</em>'; }
+    strong::before { content: '<strong>'; }
+    strong::after { content: '</strong>'; }
+
+    ul::before { content: '<ul>'; }
+    ul::after { content: '</ul>'; }
+    li::before { content: '<li>'; }
+    li::after { content: '</li>'; }
+
+    ul { padding: 0; }
+    li { padding-left: 4ch; }
+
+    canvas::before { content: '<canvas>'; }
+    canvas::after { content: '</canvas>'; }
+
+    script::before { content: '<script>'; }
+    script::after { content: '</script>'; }
+
+    a[href]:before { content: '<a href="'attr(href)'">'; }
+    a::after { content: '</a>'; }
+
+    style::before { content: '<style>'; }
+    style::after { content: '<\/style>'; }
+
+    @font-face {
+        font-family: "Fira Code";
+        src: url("Fira Code");
+    }
+    * { font-family: "Fira Code", monospace; }
+
+    html {
+        max-width: 70ch;
+        margin: auto;
+        background-color: #151515;
+        color: ghostwhite;
+        line-height: 1.5;
+        font-size: 14px;
+    }
+
+    a {
+        color: white;
+        text-decoration: underline;
+        text-decoration-color: darkred;
+    }
+    a:hover {
+        font-weight: bold;
+        text-decoration-color: crimson;
+    }
+
+    style, script {
+        max-height: 120px;
+        overflow-y: scroll;
+        color: darkslategray;
+        transition: max-height .5s ease-in, color 1s ease-in-out;
+    }
+
+    style:hover, script:hover {
+        max-height: 500px;
+        color: ghostwhite;
+        transition: max-height .5s ease-out, color 1s ease-in-out;
+    }
+
+    *::before, *::after {
+        color: darkslategray;
+        font-weight: normal;
+    }
+
+    *:hover::before, *:hover::after {
+        color:crimson;
+        font-weight: normal;
+    }
+
+    #bg {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1000;
+    }
+
+    div.inner {
+        background-image: none;
+        font-size: 6px;
+        letter-spacing: 1px;
+        line-height: 1.5;
+        white-space: pre-wrap;
+        width: min-content;
+        color: ghostwhite;
+        transition: color .5s ease-out;
+    }
+
+    div.inner:hover, div.inner:focus {
+        background-image: url("/nikolai.jpg");
+        background-position: center;
+        background-size: cover;
+        color:transparent;
+        transition: color .5s ease-out;
+    }
+
+    div.img:hover:before, div.img:focus:before {
+        content: '<img src="/nikolai.jpg" alt="nikolai" style="jpg">';
+    }
+
+    div.img::before {
+        content: '<img src="/nikolai.jpg" alt="nikolai" style="ascii">';
+    }
+    div.img::after {
+        content: '</img>';
+    }
+</style>
+</head>
+<body>
+
+    <div class="img">
+        <div class="inner" ontouchstart="void(0)">MMMMMMMMMMMMMNNNNmmmdhhyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyssssssssssssssooooooooooo++++++//////:::::::
+MMMMMMMNNNNNmddhhyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyssssssssssssssoooooooooo++++++///////////:://////
+NNNNNmmddhhyyyyyyyyyyhyyyyyyyyyyyyyyyyyyyyyyyysssssssssssssssooooooo+++++++///////////////////++++++
+mddhyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyysssssssssssssssooooo+++++++++/////////////+++++++++++++++++
+yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyysssssssssssssssssoooooo+++++++/////////++++++++++++++ooooooooooo+++++
+yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyssssssssssssooooooo+++++++++++///+++++++++ooooooooooooooooooooo+++++++
+yyyyyyyyyyyyyyyyyyyyyyyyyysssssssssoooooooo++o+++++++++++++++++oooooooooooooooooooooooooo+++++++////
+yyyyyyyyyyyyyyyyysssssssssoooooooooooyhhdmmmmmNmmdhsoooooooooooooooooooooooooooo++++++++++////::::::
+yysssssssssssssssooooooo+++++++oshmNNNNNNNNNNmNmmmddddddddysooooooooooooooo++++++/////////::::::::::
+sssssssssssoooo+++++++++osysssymNMMMNNNNmNMNNNNmmdhhhdddhdmmdyyssooo++++++////////////////////++++oo
+sssssssssssoo+++/////+osyyyhdmNNmmmdhyhhddddysssshddhhhdmmhyososssoo++//////////++++++oooossssyyyyyy
+ssyyyyyyyyysso+++++++ossyhhhdhymNdo+:-so:-..:/+/sydysyyhhyhhhyyssyyyoo+++ooooossssyyyyyyyyyyyyyyyyyy
+yyhhhhhhhhhhyssooooooos+yyyyo+hmh:-...:``   ` `.:/++++++yyhyyhyysssoossyyyyyyyyyhhhhhhyyyyyyyyysssso
+hhddddddddddhysso++++ohssys+++so/`-``.`       ```````.---/ossyo/++ooossyyyyyyyyyyyyyyysssssssooooo++
+dddddmmmddddhyo+/::::yshyh+///:.-`..``.``  ` ``````        .:/+hs/--///oosysssssssssoooooooooosoooo+
+hdddmmmmmmdhys+:-..-/mhhhdysyo+:::---.---.```...:-.---...``  `./ys/.`.-:+ooooooooooooooooooossssssoo
+hhdddddddddhso+:---+dmsshNNmddhsooo+//+oo+++/++:/+oyhhhhys/.`` `/o/-.``.-/osssoooooooooooooossssssss
+dddddmdddddhysoo+ooymmmmNNNNmmmmdddhddddddmmmdhyydNNMNNNNmdyo:.`:/::-.```-:/+ssoooooooooooooosssssoo
+NmmmmmmmdddhhyyyyyhhddmmNNNmmNNNNNNNNNNNNNNNNNNNNMMMMMMMMMNNmho/::----.```.:/osssooooooooooooooooooo
+NNNNNmmmdddhhhhhhyhddmmNNNyyNNMMNNNNNNNNNNNMMMMMMMMMMMMMMMMMNNdhs+-...-.```.-/o+osooooooooooossssooo
+MNNNNmmddhhhyyyyyyydmNNNNs+hNMMMNNNNNNNNNMMMMMMMMMMMMMMMMMMMMNNNdy/.``.-.`````-::/ooosssssssssssssso
+NNNNmdhhhyyyyyyyyydmmdmmo:odNMMNNNNNNNNNNMMMMMMMMMMMMMMMMMMMMMNNNmy/.`...```````..:+ssssssssssssssss
+NNNNmdhyyyyyyyyyyhdhyhds:/ymNNNNNNNNNNNNNNNMMMMMMMMMMMMMMMMMMMMMNNmhs/-.-...```````./sssssssssssssoo
+MNNNmdhyyyyyyyyyyyo:/hy+:ohmmNNNNNNNNNNNNNMMMMMMMMMMMMMMMMMMMMMMMMMNNNd+.:::----.```:sssssssssssssss
+NNNNmdhhhyyyyyyyysooydo:/oydmmNNNNNNNNNNNNNNMMMMMMMMMMMMMMMMMMMMMMMMNNNm-+:-.`.`.`` :sssssssssssssss
+NNNmmdhhhhhhhyyyhyyyds:::oyhmmmNNNNNNNNNNNNNNNMMMMMMMMMMMMMMMMMMMMMMNNNNsyo/-.``....osssssssssssssss
+NNNNmdhhhhhhhhhhhhhhs/--:oyhdmmNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNMMMMMMNNNNmh/-```.--:ssssssssssssssss
+MNNNmddhhhhhhhhhhho/-...:shdddmmmmmmmddddddmmmmNNNNNNmmhhyhhhydmNNNNNNmNNNms-..:/+syssssssssssssssyy
+MNNNmmddhhhhhhhhh+-.``..:shhddhyosyyo/:--://oydmNNNNdhoo//:/+oyhhddmmmmNNNNd/.::+shyssssoooosssssyyy
+MMNNmmddhhhhhhhhh/.``.`.:shddhssyyo+/::---:/+oymNNNNNhyso/:---//osydmmmNNNNNy--//ydhsssoooosssssyyyy
+MMNNmmddhhhhhhhhh+.``.``-shhdyyy+/:+...--/..-:ymNNNNNdso:-+/-`:-s:/+ydmmNNNNd/``:hdysssssssssssssyys
+MMNNmmdhhhhhhhhhh+/.````-yhddyys+-/y+/:/ss//++ydNNNNNmhhsoyhyssyhyyyyhmNNNNNms``/ydyssssssssssssssss
+MMMNmmdhhhhhhhhhhhs/-.`.:hdmdhhyyhhhhhhyysyyyyydmNNMNNNmdhysyhhdddmNNNNNNNNNNy..ohdhyyssssssssssssss
+MMMNmmdhhhhhhhhhhdy++.``/mmmmdmddhyyyyyyhddhhhhdmNNNNNNNNNNNmdddmNNNNNNNNNNMNs:odmNhyysssssssssyssss
+MMMNmddhhhhhhhhhhhhsy/../mmmmmmmmmmmmmmmmmddhhdmmNNNNNNNNNNNNNNNNNNNNNMNNNNNNy/ymNNysssyyysssssyyyyy
+MMMNmddhhhhhhhhhhhddh+:-+dmNmmmNmNmNNmmmmmdhydmNNNNNNNNNNNNNNNNNNNNNMMMNNNNNmyoydMdsssyyyyssssssyyyy
+MMMNNmdhhhhhhhhhhhhmdo+:/ymNmmmNNNNNmmmmmddhmmmmNNNNNNNNNNmNNNNNNNNNMMNNNNNNddNNNNhssyyyyyssssssyyyy
+MMMMNmdhhhhhhhhhhyhddhNdysdNmmmmmmmNmmmdddhhdhhhmmmmmmmNNNmmmmNNNNNNNNNNNNNNdNMMNmyyyyyyyyssyyyyyyyy
+MMMMNmdhhhhhyhyyhhyhhhdmdsdNmmmmmmmmmmdhhhyso::+syhysooohdmmdddmNNNNNNNNNNNNdNNNdyyyyyyyyyyyyyyyyyyy
+MMMMNNdhhhhhhhhyyyyyyhhdhyhmmmmdddmmdhyhhhs+-.`-:/+++/:/hmmmmdddmmNNmNNNNNNmhddhyyyyyyyyyyyyyhhhyyyy
+MMMMNNdhhhhhhhhhyyyyyyyhyoommmdhhdddyyyhhy+:-.---...-::oymmNmmmmmmNNmmNNNNNdssyyyyyyyyyyyyyyyhhhyyyy
+MMMMNNmhhhhhhhhhhhyyyyyyysodddhhhdyosssysoo++//+++/://oyhddmNmmmddNNmmNNNNms+syyyhyyyyyyyyyyyyyyyyys
+MMMMNNmhhhhhhhhhhhhhhhhhhyyyhhhyhdso+//::::/o+++osoosoo+soo+++shddNNmmmNNmhssyhhhhhyyyyyssyyyyyyyyyy
+MMMMNNmhhhhhhhhhhhhhhhhhhhyysssssddsoso-```+dymdNNmmNmNmmho`./osdmNmmddddy+yhhhhhhhhyyyyyyyyyyyyyyyy
+MMMMMNmhhhhhhhhhhhhhhhhhhhhhysssyymddddhs+/://syddhddhhsoo+shddddmmdyyhyy+ohhhhhhhhhhhhhhyhhhhhhhhhh
+MMMMMNNmddddddddddddddddddddhsoosyhddddddhssoooososshhyyhdmNNmmmmmhooooo:odddddmmmmmmmmmmmmmmmmmmddd
+MMMMMMMNNNNNNNNNNNNNNNNNNNNNNms//oyhhhmmdddyyyyyhhhdhdddmNNNNNmmmms/::::smNNNNNNNNNNNNNNNNNNNNNNNNNN
+MMMMMMMMMMMNNNNNNNNNNNNNNNNNNNdy/+syyhddddddhhyyyyyyhhmmNNNNNmdmmh+-.-omNNNNNNMMMMMMMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMmoymy++ssyyhdmddhhyysoyydhmmNNNNmdhdhy:-/hNdNMMMMMMMMMMMMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMMMMMMMMMMMMs. smhs++osyyhdddyyoso/soddmmNNmNmhho++yhmNm/+dMMMMMMMMMMMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMMMMMMMMMMMd.  hmhyo:+o+yshhdhss+//oohmNNNmdddhs++dmNNNm/-:NMMMMMMMMMMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMMMMMMMMMMm+` `ddhyso///+/yhhdsos+oshhmmmmdyyy+ohmNNNNNm--:hNMMMMMMMMMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMMMMMMMMMNs/. `ydhhyyo:-.-ooysoooooshdhyhhs++++hmNNNNNNd`-:/yNMMMMMMMMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMMMMMMNNNh+:.`./yhhyyso+--/:+//+/:/osy++o///+ohmNNNNNNNo.-:o+hmNNMMMMMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMNNdhyo+sss:-.../oyyyysso/-.:-:::..:://:--/+shmmNNNNNNd---/s+oyyhhdNNMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMNmyo//:///o//--...-:osyyyysso+/:/::--/////osyhdmmNNNNNNm/`-::-:+so+++shhmNMMMMMMMMMMMMM
+MMMMMMMMNNmdy+:::/+///oo//.-.....:+ossyssssssyyyyyhhyhdddmdmmmNNNNNms--::-:/oos/ss+sysssymNMMMMMMMMM
+MMMNmhssso+/-.-/oy+/+s/://....../--:+oossssssyyyyhhhhdddddmmmmmmdhyo:-:::-:/+oy:+sodyo++//sdNNMMMMMM
+Nds+/oss+:---:/++o:/o+--//-`--..:-.--:/+oooooosssyyhhhdddddmddhyo/+/---:::::+ds+:oooo+os+::+sydNNNMM
+/::/ydo/:---::////+++:.-/-:.`...-....--:/+oooo++oossyyhhdddhhs+:-++/:-:----::o+s-/+ooooo+/::/shhyyhh
+:/oyo/:::/:::://:///:-///./-`` .....---::/oooo++++oosyyhhhys+:::+/+--:y:---::s/s--/+oo++oos--/syysss
++ss/:::::s+:::/::::-----/.::.``-...--:..:/+oso+////+osyyyso/-+--y+s--:/-----+++s:-:+ooo+++o:.-/osyhy
+s+::::----::///::------.::.-.`/--.-:`    `.:oo/::--:+osso+/+h+-o+:s:--:://::s:y+:--/++o+oo+/-.:+osyy
+/+:----::/:::::/---------/.-...--:.     ``` `.://-..:+osoo+/+-so  +//:--:++/s:d/:--/h+++//::-.-:hy+o
+-s:--:::::::::/y:-------:o.-..../`       `--:---/o.-+yNh/s//+/-   `++/+/++oos+h//--/++:::::-----/++/
+--::--::::::::----:----.:y.:.--/-     ``  `--:::-/o:--:-..``        ./+/osdooos::--//++::::------/++
+-------:::::::--:::----.-yo+//:. ``````````-:::::::```````` `````  ``   `:+ooy/-:-::::///::-----..:+
+-------y/--:::::::---s+..`````````..+..```.-o+o/+.`.``.````````::`........`.-so-:-::::::::o/----.`..
+.-------------::---------..``.......-....``.+o++-..``..``````.....----------------::::/:::+-.---..`-
+.--.-.......------------....................-ys../.``-...``.....---:::-::::::------:::::/:--.----.`.
+.-------....-......------....................+/.+-:..:..:...-------:-:oy::::-------:+o::::--...-...`</div>
+    </div>
+
+    <h1>nikolai.cc</h1>
+    <p>My name is  <em>Nikolai Gillissen</em>. I am Design Engineer & Creative Developer of Interactive Products and Art Installations.</p>
+
+    <h3>Current projects:</h3>
+    <p>I am currently involved in the following projects:</p>
+    <ul>
+        <li><a href="https://theministry.co">The Ministry of Extraordinary Affairs></a></li>
+        <li><a href="http://mellonaut.me">Mellonaut</a></li>
+    </ul>
+
+    <h3>Past projects:</h3>
+    <ul>
+    <li><a href="http://altijd.design">Altijd Design</a></li>
+    <li><a href="http://ledbits.eu">LEDbits</a></li>
+    </ul>
+
+    <h3>Contact:</h3>
+    <p>I am always interested in discussing project or media opportunities. <a href="mailto:hi@nikolai.cc">Contact me.</a> for more info.</p>
+
+    <canvas id='bg'></canvas>
+
+    <script>
+    // Scroll to read scripts, hover to expand.
+
+    window.onload = function() {
+        var ww = window.innerWidth;
+        var wh = window.innerHeight;
+
+        var canvas = document.getElementById("bg");
+        var ctx = canvas.getContext("2d");
+
+        canvas.width = ww;
+        canvas.height = wh;
+
+        // fill array with 10 shapes
+        var shapes = [];
+
+        for (var i = 0; i < 25; i++) {
+            shapes.push(new buildShape());
+        }
+
+        setInterval(draw, 33);
+
+        // initialize shape
+        function buildShape() {
+            // random location on bg
+            this.x = Math.random()*ww;
+            this.y = Math.random()*wh;
+
+            this.r = Math.random()*15+5;
+
+            // // random velocity
+            this.vx = Math.random()*4-2;
+            this.vy = Math.random()*4-2;
+
+            // // random growth/shrink rate
+            this.vr = Math.random()*.25-.125;
+
+            var r = Math.round(Math.random()*30);
+            var g = Math.round(Math.random()*0);
+            var b = Math.round(Math.random()*0);
+
+            this.rgb = "rgb("+r+","+g+","+b+")";
+        }
+
+        function draw() {
+            ctx.globalCompositeOperation = "source-over";
+            // ctx.fillStyle = "rgb(33,33,33)";
+            // ctx.fillRect(0,0,ww,wh);
+
+            for (var j = 0; j < shapes.length; j++) {
+
+                var s = shapes[j];
+
+                ctx.beginPath();
+
+                var gradient = ctx.createLinearGradient(s.x-.5*s.r, s.y-.5*s.r, s.x+.5*s.r, s.y+.5*s.r);
+
+                gradient.addColorStop(0, s.rgb);
+                gradient.addColorStop(0.5, s.rgb);
+                gradient.addColorStop(1, s.rgb);
+
+                ctx.arc(s.x, s.y, s.r, 0, Math.PI*2);
+
+                ctx.strokeStyle = gradient;
+                ctx.stroke();
+
+                s.x += s.vx;
+                s.y += s.vy;
+                s.r += s.vr;
+
+                if (s.r >= 20) {s.vr *= -1};
+                if (s.r <= 5) {s.vr *= -1};
+
+                if(s.x < -s.r) {s.x = ww+s.r};
+                if(s.y < -s.r) {s.y = wh+s.r};
+
+                if(s.x > ww+s.r) {s.x = -s.r};
+                if(s.y > wh+s.r) {s.y = -s.r};
+            }
+        }
+
+        window.onresize = function() {
+            ww = window.innerWidth;
+            wh = window.innerHeight;
+
+            canvas.width = ww;
+            canvas.height = wh;
+        }
+    }
+</script>
+</body>
+</html>
